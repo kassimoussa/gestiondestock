@@ -1,0 +1,6 @@
+1 - On copie le fichier .env.example et on le nom .env
+2 - Dans le fichier .env on change les informations concernant la base de données de votre application.
+3 - Dans un terminal à la racine du projet on lance la commande : composer install
+4 - Dans le meme terminal on lance les commande suivantes : 
+    php artisan key:generate
+    php artisan migrate 
