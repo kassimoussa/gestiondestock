@@ -16,9 +16,11 @@ class ResetPass extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public $rand;
+
+    public function __construct($rand)
     {
-        //
+        $this->rand = $rand;
     }
 
     /**
@@ -28,6 +30,7 @@ class ResetPass extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        $rand = $this->rand;
+        return $this->view('emails.reset_password')->subject("Réinitialisation de mot de passe !")->with(compact('rand'));
     }
 }
